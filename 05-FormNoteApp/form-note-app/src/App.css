@@ -1,0 +1,104 @@
+body{
+    background-color: rgba(0, 0, 0, 0.731);
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+  }
+
+  .form-container{
+    width: 450px;
+    border: 1px solid rgb(144, 142, 142);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .create-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crate-form label{
+    margin: 10px 0px;
+  }
+
+  .input-label{
+    margin: 10px 0px;
+    font-size: 1.3rem;
+  }
+
+  .input-element{
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+
+  .save-button{
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: rgba(1, 231, 1, 0.925);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .save-button:hover{
+    background-color: rgb(216, 231, 1);
+  }
+
+  .note-show-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .note-card-container{
+    background-color: rgba(240, 248, 255, 0.208);
+    border: 1px solid rgba(128, 128, 128, 0.829);
+    border-radius: 8px;
+    font-size: 1.3rem;
+    margin: 20px;
+    padding: 30px;
+    transition: scale 0.3s ease;
+  }
+
+  .note-card-container:hover{
+    scale:1.05
+  }
+
+  .button-container{
+    padding: 10px;
+  }
+
+  .update-btn{
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    background-color: rgba(81, 59, 153, 0.502);
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .update-btn:hover{
+    background-color: rgba(81, 59, 153, 0.973);
+  }
+
+  .delete-btn{
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    background-color: rgba(255, 0, 0, 0.571);
+    margin-left: 10px;
+    width: 60px;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+  }
+
+  .delete-btn:hover{
+    background-color: rgb(255, 0, 0);
+  }
