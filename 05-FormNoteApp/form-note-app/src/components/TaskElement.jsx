@@ -1,5 +1,10 @@
 
-function TaskElement({selectedNote}) {
+function TaskElement({selectedNote, onDelete}) {
+
+const handleDeleteClick = () => {
+    onDelete(selectedNote.id)
+}
+
     console.log(selectedNote)
     return (
     <div className="note-card-container">
@@ -8,8 +13,8 @@ function TaskElement({selectedNote}) {
         <h3>Not içeriği:</h3>
         <p>{selectedNote.content}</p>
         <div className="button-container">
-            <button className="update-btn">Güncelle</button>
-            <button className="delete-btn">Sil</button>
+            <button className="update-btn" >Güncelle</button>
+            <button className="delete-btn" onClick={handleDeleteClick}>Sil</button>
         </div>
     </div>)
 }

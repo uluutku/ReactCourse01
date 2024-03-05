@@ -18,11 +18,16 @@ function App() {
     setNotes(createdNotes);
 }
 
+const deleteTaskById = (id) => {
+ const afterDeleteNotes = notes.filter((notes) => {return notes.id !== id;})
+ setNotes(afterDeleteNotes);
+}
+
   return (
     <>
     <TaskCreate onCreate={createTask}/>
     <h1>Notlar</h1>
-    <TaskList sendedNotes={notes}/>
+    <TaskList sendedNotes={notes} onDelete={deleteTaskById}/>
     </>
   )
 }
