@@ -23,11 +23,21 @@ const deleteTaskById = (id) => {
  setNotes(afterDeleteNotes);
 }
 
+const editNoteById = (id , updatedTitle, updatedContent) => {
+    const editedNotes = notes.map((notes) => {
+      if(notes.id === id){
+        return {id:id, title:updatedTitle, content: updatedContent}
+      }
+      return notes;
+    });
+    setNotes(editedNotes);
+}
+
   return (
     <>
     <TaskCreate onCreate={createTask}/>
     <h1>Notlar</h1>
-    <TaskList sendedNotes={notes} onDelete={deleteTaskById}/>
+    <TaskList sendedNotes={notes} onDelete={deleteTaskById} onUpdate={editNoteById}/>
     </>
   )
 }

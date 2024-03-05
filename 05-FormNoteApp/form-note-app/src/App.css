@@ -102,3 +102,41 @@ body{
   .delete-btn:hover{
     background-color: rgb(255, 0, 0);
   }
+
+  .edit-container{
+    width: 450px;
+    border: 1px solid rgb(144, 142, 142);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .edit-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edit-form label{
+    margin: 10px 0px;
+  }
+
+  .edit-save-button{
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: rgba(147, 93, 255, 0.925);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .edit-save-button:hover{
+    margin-top: 20px;
+    border: 1px solid black;
+    height: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: rgba(118, 88, 179, 0.925);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
