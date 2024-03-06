@@ -16,7 +16,8 @@ function SearchHeader({search}) {
     return (<>
     <div className="search-div">
         <form onSubmit={handleFormSubmit}>
-            <label>Ne arıyorsunuz?</label>
+            <label>Ne Arıyorsunuz?</label>
+            <br />
             <input type="text" value={keyword} onChange={handleTextChange}/>
         </form>
     </div>
