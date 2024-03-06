@@ -8,7 +8,7 @@ function TaskList({sendedNotes, onDelete , onUpdate}) {
             {sendedNotes.map((selectedNote,index) => {return (
                 <TaskElement selectedNote={selectedNote} key={index} onDelete={onDelete} onUpdate={onUpdate} />
             )
-            })};
+            })}
         </div>
     </div>
     </>);
