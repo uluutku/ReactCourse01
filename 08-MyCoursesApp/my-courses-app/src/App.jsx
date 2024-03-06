@@ -16,7 +16,7 @@ function App() {
   const fetchCourses = async () => {
     setLoading(true);
     try {
-      const apiResponse = await axios.get("http://localhost:3000/courses");
+      const apiResponse = await axios.get("http://localhost:3004/courses");
       setCourses(apiResponse.data);
       setLoading(false);
     } catch (error) {
