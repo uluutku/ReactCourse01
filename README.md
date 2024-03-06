@@ -15,7 +15,7 @@ To run this project locally, follow these steps:
     ```
 3. Start the JSON Server by running the following command:
     ```bash
-    json-server --watch /api/db.json --port 3004
+    json-server --watch ./api/db.json --port 3004
     ```
 4. Open a new terminal window (or tab).
 5. Navigate to the project directory:
