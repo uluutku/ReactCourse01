@@ -59,3 +59,24 @@ body{
   scale: 1.05;
   background-color: rgb(255, 0, 0);
 }
+
+.refresh-btn{
+  padding: 10px 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(0, 255, 183, 0.735);
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover{
+  scale: 1.05;
+  background-color: rgb(0, 255, 183);
+}
+
+.refresh-container{
+  margin-top: 40vh;
+  text-align: center;
+}
