@@ -1,4 +1,4 @@
-# Project Name
+# Instructions for JSON Server releated projects.
 
 ## Description
 
