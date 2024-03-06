@@ -1,30 +1,43 @@
 import TaskCreate from "./components/TaskCreate"
 import TaskList from "./components/TaskList"
 import "./App.css"
+import axios from "axios"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function App() {
 
   const [notes, setNotes] = useState([])
 
-  const createTask = (title,content) => {
-    const createdNotes = [...notes, {
-      id:Math.round(Math.random()*9999999),
-      title:title,
-      content:content
-    }]
+  const createTask = async (title,content) => {
+    const response = await axios.post("http://localhost:3004/notes" , {title:title, content:content} )
+    console.log(response)
+
+    const createdNotes = [...notes, 
+      response.data
+    ];
 
     setNotes(createdNotes);
 }
 
-const deleteTaskById = (id) => {
+const apiGetter = async () => {
+  const apiResponse = await axios.get("http://localhost:3004/notes")
+setNotes(apiResponse.data);
+}
+
+useEffect(() => {
+apiGetter();
+},[])
+
+const deleteTaskById = async (id) => {
+ await axios.delete(`http://localhost:3004/notes/${id}`)
  const afterDeleteNotes = notes.filter((notes) => {return notes.id !== id;})
  setNotes(afterDeleteNotes);
 }
 
-const editNoteById = (id , updatedTitle, updatedContent) => {
-    const editedNotes = notes.map((notes) => {
+const editNoteById = async (id , updatedTitle, updatedContent) => {
+  await axios.put(`http://localhost:3004/notes/${id}`,{title:updatedTitle, content:updatedContent})
+  const editedNotes = notes.map((notes) => {
       if(notes.id === id){
         return {id:id, title:updatedTitle, content: updatedContent}
       }
