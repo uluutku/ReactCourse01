@@ -1,0 +1,35 @@
+.course-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.course-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    position: relative; /* Add position relative to the card */
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Set the width of the container to match the card */
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
