@@ -1,0 +1,7 @@
+.course-list-container {
+  display: flex;
+  margin: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
