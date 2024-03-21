@@ -5,14 +5,14 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   width: 300px;
-  height: 450px;
+  height: 500px;
   margin: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.02);
 }
 
 .card img {
@@ -43,4 +43,48 @@
   color: #666666;
   font-style: italic;
   margin-top: 24px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container button {
+  border: none;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0px 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-container button:hover {
+  scale: 1.3;
+}
+
+.delete-btn {
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 2rem;
+  width: 20%;
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  margin-left: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  height: 50px;
+  scale: 1.2;
 }

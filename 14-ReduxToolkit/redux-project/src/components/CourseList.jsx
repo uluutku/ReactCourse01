@@ -1,9 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CourseItem from "./CourseItem";
 import "./CourseList.css";
+import { clearCart } from "../control/cardSlice";
 
 function CourseList() {
+  const dispatch = useDispatch();
+
   const { cartItems, quantity, total } = useSelector((store) => store.cart);
   console.log("cartItems", cartItems);
   return (
@@ -13,7 +16,7 @@ function CourseList() {
       ) : (
         <>
           <div className="course-list-container">
-            {cartItems[0].map((item, index) => {
+            {cartItems.map((item, index) => {
               return <CourseItem {...item} key={index} />;
             })}
           </div>
@@ -23,9 +26,9 @@ function CourseList() {
       <footer>
         <hr></hr>
         <div>
-          <h4>Toplam Tutar: {total} </h4>
+          <h4>Toplam Tutar: {total}</h4>
         </div>
-        <button>Temizle</button>
+        <button onClick={() => dispatch(clearCart())}>Temizle</button>
       </footer>
     </>
   );
